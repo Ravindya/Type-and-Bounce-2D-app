@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cursor {
+    width: 125px;
+    height: 125px;
+    background-color: rgba(0, 178, 255, 0.8);
+    border-radius: 100%;
+    position: absolute;
+    animation: shadow 500ms infinite;
+}
+
+.hide {
+    animation:  shadow 500ms infinite,  fade 500ms forwards;
+}
+
+body {
+    overflow: hidden;
+    cursor: none;
+}
+
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes shadow{
+    from {
+        box-shadow: 0 0 8px 0 #b0f1f9;
+    }
+    to {
+        box-shadow: 0 0 8px 16px #b0f1f9;
+    }
+}

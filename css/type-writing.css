@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: -apple-system,sans-serif;
+}
+#text-container{
+    font-size: 5.5vw;
+    font-weight: 500;
+    background-color: rgba(211, 211, 211, 0.57);
+    padding: 10px 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    z-index: 1;
+
+    @media screen and (width<=576px) {
+        font-size: 7vw;
+    }
+}
+#cursor{
+    width: 0.4em;
+    height: 1em;
+    background-color: black;
+    border-radius: 5px;
+    margin-left: 10px;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-duration: 850ms;
+}
+@keyframes blink {
+    from{
+        opacity: 1;
+        background-color: blue;
+    }
+    to{
+        opacity: 0;
+    }
+}
